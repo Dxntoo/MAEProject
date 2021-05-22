@@ -1,5 +1,6 @@
 package com.example.dantoo
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -20,6 +21,10 @@ class MainActivity : AppCompatActivity() {
 
             Log.d("Email is: ", email)
             Log.d("Password is: ", password)
+
+            val intent = Intent(this, Dashboard::class.java)
+
+            startActivity(intent)
         }
 
 
