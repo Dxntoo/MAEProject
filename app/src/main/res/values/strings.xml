@@ -8,4 +8,10 @@
     <string name="dashboard_greetings">Hello There</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_exercise">Exercise</string>
+    <string name="avatar_placeholder">Avatar</string>
+
+    <!--User-->
+    <string name="profile_username">Danish Ishak</string>
+
 </resources>

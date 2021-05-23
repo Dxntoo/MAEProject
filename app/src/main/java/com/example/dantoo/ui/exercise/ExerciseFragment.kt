@@ -1,6 +1,5 @@
-package com.example.dantoo.ui.profile
+package com.example.dantoo.ui.exercise
 
-import android.app.ActionBar
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,12 +7,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.dantoo.R
-import com.example.dantoo.databinding.FragmentProfileBinding
-import com.example.dantoo.ui.profile.ProfileViewModel
+import com.example.dantoo.databinding.FragmentExerciseBinding
+import com.example.dantoo.ui.exercise.ExerciseViewModel
 
-class ProfileFragment : Fragment() {
-    private lateinit var profileViewModel: ProfileViewModel
-    private var _binding: FragmentProfileBinding? = null
+
+class ExerciseFragment : Fragment() {
+
+    private lateinit var exerciseViewModel: ExerciseViewModel
+    private var _binding: FragmentExerciseBinding? = null
 
     private val binding get() = _binding!!
 
@@ -21,16 +22,14 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        exerciseViewModel =
+            ViewModelProvider(this).get(ExerciseViewModel::class.java)
 
-        profileViewModel =
-            ViewModelProvider(this).get(ProfileViewModel::class.java)
-
-        _binding = FragmentProfileBinding.inflate(inflater, container, false)
+        _binding = FragmentExerciseBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         return root
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()
