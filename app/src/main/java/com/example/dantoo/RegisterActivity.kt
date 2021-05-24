@@ -3,6 +3,7 @@ package com.example.dantoo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.widget.Toast
 import com.example.dantoo.databinding.ActivityRegisterBinding
 import com.example.dantoo.firestore.FirestoreClass
@@ -76,32 +77,31 @@ class RegisterActivity : BaseActivity() {
             val password: String = passwordText.text.toString().trim { it <= ' ' }
 
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(
-                    OnCompleteListener<AuthResult> { task ->
+                .addOnCompleteListener { task ->
 
 //
-                        // If the registration is successfully done
-                        if (task.isSuccessful) {
+                    // If the registration is successfully done
+                    if (task.isSuccessful) {
 
-                            // Firebase registered user
-                            val firebaseUser: FirebaseUser = task.result!!.user!!
+                        // Firebase registered user
+                        val firebaseUser: FirebaseUser = task.result!!.user!!
 
-                            val user = User(
-                                firebaseUser.uid,
-                                usernameText.text.toString().trim { it <= ' ' },
-                                emailText.text.toString().trim { it <= ' ' }
-                            )
+                        val user = User(
+                            firebaseUser.uid,
+                            usernameText.text.toString().trim { it <= ' ' },
+                            emailText.text.toString().trim { it <= ' ' }
+                        )
 
-                            FirestoreClass().registerUser(this@RegisterActivity, user)
+                        FirestoreClass().registerUser(this@RegisterActivity, user)
 
 
+                    } else {
+                        hideProgressDialog()
+                        // If the registering is not successful then show error message.
 
-                        } else {
-                            hideProgressDialog()
-                            // If the registering is not successful then show error message.
-                            showErrorSnackBar(task.exception!!.message.toString(), true)
-                        }
-                    })
+                        showErrorSnackBar(task.exception!!.message.toString(), true)
+                    }
+                }
 
         }
 
