@@ -1,22 +1,26 @@
 package com.example.dantoo.ui.profile
 
-import android.app.ActionBar
-import androidx.lifecycle.ViewModelProvider
+import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.viewpager.widget.ViewPager
-import com.example.dantoo.R
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import com.example.dantoo.LoginActivity
 import com.example.dantoo.databinding.FragmentProfileBinding
-import com.example.dantoo.ui.profile.ProfileViewModel
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.fragment_profile.*
 
-class ProfileFragment : Fragment() {
+
+class ProfileFragment : Fragment(){
     private lateinit var profileViewModel: ProfileViewModel
     private var _binding: FragmentProfileBinding? = null
 
     private val binding get() = _binding!!
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,10 +36,8 @@ class ProfileFragment : Fragment() {
         val tablayout = binding.tabLayout
         val viewPager = binding.viewpager
 
-
         return root
     }
-
 
 
 
@@ -43,6 +45,10 @@ class ProfileFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+
+
+
 
 
 }

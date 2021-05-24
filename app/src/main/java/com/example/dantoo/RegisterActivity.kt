@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
+import android.view.WindowManager
 import android.widget.Toast
 import com.example.dantoo.databinding.ActivityRegisterBinding
 import com.example.dantoo.firestore.FirestoreClass
@@ -20,17 +21,21 @@ class RegisterActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
+
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
         supportActionBar?.hide()
 
         registerBtn.setOnClickListener{
-            registerAccount()
+            registerUser()
         }
 
     }
 
     private fun validateRegisterDetails(): Boolean {
         return when {
-
             TextUtils.isEmpty(usernameText.text.toString().trim { it <= ' ' }) -> {
                 showErrorSnackBar(resources.getString(R.string.err_msg_enter_username), true)
                 false
@@ -67,7 +72,7 @@ class RegisterActivity : BaseActivity() {
         }
     }
 
-    private fun registerAccount(){
+    private fun registerUser(){
         if(validateRegisterDetails()){
 
             showProgressDialog(resources.getString(R.string.please_wait))
@@ -77,7 +82,8 @@ class RegisterActivity : BaseActivity() {
             val password: String = passwordText.text.toString().trim { it <= ' ' }
 
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener { task ->
+                .addOnCompleteListener(
+                    OnCompleteListener<AuthResult>{ task ->
 
 //
                     // If the registration is successfully done
@@ -101,7 +107,7 @@ class RegisterActivity : BaseActivity() {
 
                         showErrorSnackBar(task.exception!!.message.toString(), true)
                     }
-                }
+                })
 
         }
 

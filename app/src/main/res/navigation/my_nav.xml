@@ -2,10 +2,4 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/my_nav.xml">
-    <activity
-        android:id="@+id/loginActivity2"
-        android:name="com.example.dantoo.LoginActivity"
-        android:label="activity_login"
-        tools:layout="@layout/activity_login" />
-</navigation>
+    android:id="@+id/my_nav.xml"/>

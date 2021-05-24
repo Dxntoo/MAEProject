@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
 import com.example.dantoo.databinding.ActivitySplashBinding
+import com.example.dantoo.firestore.FirestoreClass
 
 @Suppress("DEPRECATION")
 class SplashActivity : AppCompatActivity() {
@@ -22,10 +23,17 @@ class SplashActivity : AppCompatActivity() {
         )
 
         Handler().postDelayed({
-            // Your Code
-            startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
+
+            val currentUserID = FirestoreClass().getCurrentUserID()
+
+            if(currentUserID.isNotEmpty()){
+                startActivity(Intent(this@SplashActivity, Dashboard::class.java))
+            }else{
+                startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
+            }
 
             finish() // Call this when your activity is done and should be closed.
+
 
         }, 2500)
     }

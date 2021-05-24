@@ -6,6 +6,7 @@ import android.text.TextUtils
 import android.util.Log
 import android.view.View
 import android.view.Window
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dantoo.databinding.ActivityLoginBinding
 import com.example.dantoo.firestore.FirestoreClass
@@ -13,22 +14,30 @@ import com.example.dantoo.models.User
 import com.example.dantoo.ui.profile.ProfileFragment
 import com.example.dantoo.utils.Constants
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.fragment_profile.*
 
+@Suppress("DEPRECATION")
 class LoginActivity : BaseActivity(), View.OnClickListener {
-    private lateinit var binding: ActivityLoginBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityLoginBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        supportActionBar?.hide()
 
+        setContentView(R.layout.activity_login)
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
+
+        supportActionBar?.hide()
 
         signupBtn.setOnClickListener{
 
             val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
             startActivity(intent)
         }
+
 
 
         forgotPasswordText.setOnClickListener(this)
@@ -138,11 +147,11 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
         hideProgressDialog()
 
         // Print the user details in the log as of now.
-
+        Log.i("Username: ", user.username)
         Log.i("Email: ", user.email)
 
         if(user.profileCompleted == 0){
-            val intent = Intent(this@LoginActivity, ProfileFragment::class.java)
+            val intent = Intent(this@LoginActivity, UserProfileActivity::class.java)
             intent.putExtra(Constants.EXTRA_USER_DETAILS, user)
             startActivity(intent)
         }else{

@@ -3,21 +3,26 @@ package com.example.dantoo.firestore
 
 import android.app.Activity
 import android.content.Context
+import android.net.Uri
 import android.util.Log
 import com.example.dantoo.LoginActivity
 import com.example.dantoo.RegisterActivity
+import com.example.dantoo.UserProfileActivity
 import com.example.dantoo.models.User
 import com.example.dantoo.utils.Constants
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 
 class FirestoreClass {
-    private val mFirestore = FirebaseFirestore.getInstance()
+
+    private val mFireStore = FirebaseFirestore.getInstance()
 
     fun registerUser(activity: RegisterActivity, userInfo: User){
 
-        mFirestore.collection(Constants.USERS)
+        mFireStore.collection(Constants.USERS)
             // Document ID for users fields. Here the document it is the User ID.
             .document(userInfo.id)
             // Here the userInfo are Field and the SetOption is set to merge. It is for if we wants to merge later on instead of replacing the fields.
@@ -36,7 +41,7 @@ class FirestoreClass {
                 )
             }
     }
-    private fun getCurrentUserID(): String {
+    fun getCurrentUserID(): String {
         // An Instance of currentUser using FirebaseAuth
         val currentUser = FirebaseAuth.getInstance().currentUser
 
@@ -52,7 +57,7 @@ class FirestoreClass {
     fun getUserDetails(activity: Activity) {
 
         // Here we pass the collection name from which we wants the data.
-        mFirestore.collection(Constants.USERS)
+        mFireStore.collection(Constants.USERS)
             // The document id to get the Fields of user.
             .document(getCurrentUserID())
             .get()
@@ -91,4 +96,6 @@ class FirestoreClass {
                 )
             }
     }
+
+
 }
