@@ -1,20 +1,20 @@
 {
   "project_info": {
-    "project_number": "793349976619",
-    "project_id": "e-trite-270d8",
-    "storage_bucket": "e-trite-270d8.appspot.com"
+    "project_number": "923937632155",
+    "project_id": "maeproject-bf5f0",
+    "storage_bucket": "maeproject-bf5f0.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:793349976619:android:c4ea23428ab60a0a57f06e",
+        "mobilesdk_app_id": "1:923937632155:android:0b02e2e0a0c90553f43b3e",
         "android_client_info": {
           "package_name": "com.example.dantoo"
         }
       },
       "oauth_client": [
         {
-          "client_id": "793349976619-c9hdsnu7upnab3oqibhl5sn83ecbiv60.apps.googleusercontent.com",
+          "client_id": "923937632155-65irrl8nphc8qcihr1jehqo7v7qtrpe3.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.dantoo",
@@ -22,20 +22,20 @@
           }
         },
         {
-          "client_id": "793349976619-v1aosg564ff1ccsahi1h9jobsfmigs47.apps.googleusercontent.com",
+          "client_id": "923937632155-fb3qps8gri4im6l19kt70cobuj5ddie9.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCz7pwZlsBceX8NuOD7F-oAZc8RuzpSkWI"
+          "current_key": "AIzaSyBDObyRxIZluEdmJU_ZvA3Jb00lKzWKtOQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "793349976619-v1aosg564ff1ccsahi1h9jobsfmigs47.apps.googleusercontent.com",
+              "client_id": "923937632155-fb3qps8gri4im6l19kt70cobuj5ddie9.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

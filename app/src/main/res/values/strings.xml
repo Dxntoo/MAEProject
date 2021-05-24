@@ -33,4 +33,6 @@
     <string name="register_success">You are registered successfully.</string>
     <string name="lbl_forgot_password">Forgot Password?</string>
 
+    <string name="title_forgot_password">Password Reset</string>
+
 </resources>

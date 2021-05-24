@@ -12,14 +12,13 @@ import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.android.synthetic.main.activity_register.*
-
+@Suppress("DEPRECATION")
 class RegisterActivity : BaseActivity() {
-    private lateinit var binding: ActivityRegisterBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-        binding = ActivityRegisterBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+
         supportActionBar?.hide()
 
         registerBtn.setOnClickListener{
@@ -72,7 +71,7 @@ class RegisterActivity : BaseActivity() {
 
             showProgressDialog(resources.getString(R.string.please_wait))
 
-            val username: String = usernameText.text.toString().trim { it <= ' ' }
+
             val email: String = emailText.text.toString().trim { it <= ' ' }
             val password: String = passwordText.text.toString().trim { it <= ' ' }
 
@@ -90,8 +89,7 @@ class RegisterActivity : BaseActivity() {
                             val user = User(
                                 firebaseUser.uid,
                                 usernameText.text.toString().trim { it <= ' ' },
-                                emailText.text.toString().trim { it <= ' ' },
-
+                                emailText.text.toString().trim { it <= ' ' }
                             )
 
                             FirestoreClass().registerUser(this@RegisterActivity, user)

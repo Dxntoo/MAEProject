@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.dantoo.databinding.ActivityLoginBinding
 import com.example.dantoo.firestore.FirestoreClass
 import com.example.dantoo.models.User
+import com.example.dantoo.ui.profile.ProfileFragment
 import com.example.dantoo.utils.Constants
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
@@ -23,21 +24,10 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
         supportActionBar?.hide()
 
 
-        binding.loginBtn.setOnClickListener {
-            val email = binding.emailTextField.text.toString()
-            val password = binding.passwordTextField.text.toString()
+        signupBtn.setOnClickListener{
 
-            Log.d("Email is: ", email)
-            Log.d("Password is: ", password)
-
-            login()
-
-
-        }
-
-        binding.signupBtn.setOnClickListener{
-            val registerintent = Intent(this, RegisterActivity::class.java)
-            startActivity(registerintent)
+            val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
+            startActivity(intent)
         }
 
 
@@ -148,12 +138,11 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
         hideProgressDialog()
 
         // Print the user details in the log as of now.
-        Log.i("First Name: ", user.firstName)
-        Log.i("Last Name: ", user.lastName)
+
         Log.i("Email: ", user.email)
 
         if(user.profileCompleted == 0){
-            val intent = Intent(this@LoginActivity, UserProfileActivity::class.java)
+            val intent = Intent(this@LoginActivity, ProfileFragment::class.java)
             intent.putExtra(Constants.EXTRA_USER_DETAILS, user)
             startActivity(intent)
         }else{
