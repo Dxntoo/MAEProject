@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "793349976619",
+    "project_id": "e-trite-270d8",
+    "storage_bucket": "e-trite-270d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793349976619:android:c4ea23428ab60a0a57f06e",
+        "android_client_info": {
+          "package_name": "com.example.dantoo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "793349976619-c9hdsnu7upnab3oqibhl5sn83ecbiv60.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dantoo",
+            "certificate_hash": "a082426679fba5222f1eb3385f764f4c68a6d63f"
+          }
+        },
+        {
+          "client_id": "793349976619-v1aosg564ff1ccsahi1h9jobsfmigs47.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCz7pwZlsBceX8NuOD7F-oAZc8RuzpSkWI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "793349976619-v1aosg564ff1ccsahi1h9jobsfmigs47.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -13,5 +13,24 @@
 
     <!--User-->
     <string name="profile_username">Danish Ishak</string>
+    <string name="please_wait">Please Wait&#8230;</string>
+    <string name="please_click_back_again_to_exit">Please click back again to exit.</string>
+
+
+    <string name="err_msg_enter_username">Please enter username.</string>
+    <string name="err_msg_enter_email">Please enter email.</string>
+    <string name="err_msg_enter_password">Please enter password.</string>
+    <string name="err_msg_enter_confirm_password">Please enter confirm password.</string>
+    <string name="err_msg_password_and_confirm_password_mismatch">Password and confirm password does not match.</string>
+    <string name="err_msg_agree_terms_and_condition">Please agree terms and condition.</string>
+
+    <string name="et_hint_username">Username</string>
+    <string name="et_hint_email_id">Email ID</string>
+    <string name="et_hint_password">Password</string>
+    <string name="et_hint_confirm_password">Confirm Password</string>
+    <string name="i_agree_to_the_terms_and_condition">I Agree To The <u> Terms &amp; Condition </u></string>
+
+    <string name="register_success">You are registered successfully.</string>
+    <string name="lbl_forgot_password">Forgot Password?</string>
 
 </resources>
