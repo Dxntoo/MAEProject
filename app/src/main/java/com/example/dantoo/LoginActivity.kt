@@ -110,11 +110,8 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
 
                     if (task.isSuccessful) {
 
-                        // TODO Step 5: Move the hide progress dialog to else part and remove the success message and call the getUserDetails function from Firestore class once the user is logged in.
-                        // START
-                        /*showErrorSnackBar("You are logged in successfully.", false)*/
-
                         FirestoreClass().getUserDetails(this@LoginActivity)
+
                         // END
                     } else {
                         // Hide the progress dialog
@@ -125,21 +122,6 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
         }
     }
 
-    //Create a login function
-//    private fun login(){
-//
-//        //initialize var
-//        val email = binding.emailTextField.text.toString();
-//        val password = binding.passwordTextField.text.toString();
-//
-//        if(email == "danishzwordan@gmail.com" && password == "qwerty123"){
-//            val intent = Intent(this, Dashboard::class.java)
-//            startActivity(intent)
-//        }else{
-//            val message = "";
-//            Log.d(message,"Error")
-//        }
-//    }
 
     fun userLoggedInSuccess(user: User) {
 
@@ -150,13 +132,9 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
         Log.i("Username: ", user.username)
         Log.i("Email: ", user.email)
 
-        if(user.profileCompleted == 0){
-            val intent = Intent(this@LoginActivity, UserProfileActivity::class.java)
-            intent.putExtra(Constants.EXTRA_USER_DETAILS, user)
-            startActivity(intent)
-        }else{
-            startActivity(Intent(this@LoginActivity, Dashboard::class.java))
-        }
+
+        startActivity(Intent(this@LoginActivity, Dashboard::class.java))
+
         finish()
 
     }

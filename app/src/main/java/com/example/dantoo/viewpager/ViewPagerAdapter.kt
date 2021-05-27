@@ -1,23 +1,23 @@
 package com.example.dantoo.viewpager
 
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class ViewPagerAdapter(list: ArrayList<Fragment>, fm: FragmentManager, lifecycle: Lifecycle): FragmentStateAdapter(fm, lifecycle){
-
-    private val fragmentlist = list
+class  ViewPagerAdapter(val items: ArrayList<Fragment>, activity: Fragment): FragmentStateAdapter(activity){
 
 
 
     override fun getItemCount(): Int {
 
-        return fragmentlist.size
+        return items.size
     }
 
     override fun createFragment(position: Int): Fragment {
-        return fragmentlist[position]
+        return items[position]
     }
 
 

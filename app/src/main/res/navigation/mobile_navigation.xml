@@ -31,5 +31,5 @@
         android:id="@+id/navigation_exercise"
         android:name="com.example.dantoo.ui.exercise.ExerciseFragment"
         android:label="@string/title_exercise"
-        tools:layout="@layout/fragment_exercise" />
+        tools:layout="@layout/fragment_profile" />
 </navigation>

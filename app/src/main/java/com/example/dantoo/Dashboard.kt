@@ -9,7 +9,9 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.dantoo.databinding.ActivityDashboardBinding
+import com.example.dantoo.models.User
 import com.example.dantoo.ui.profile.ProfileFragment
+import com.example.dantoo.utils.Constants
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.fragment_profile.*
@@ -17,6 +19,7 @@ import kotlinx.android.synthetic.main.fragment_profile.*
 class Dashboard : AppCompatActivity() {
 
     private lateinit var binding: ActivityDashboardBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
