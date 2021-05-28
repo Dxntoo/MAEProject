@@ -13,6 +13,7 @@ import com.example.dantoo.firestore.FirestoreClass
 import com.example.dantoo.models.User
 import com.example.dantoo.ui.profile.ProfileFragment
 import com.example.dantoo.utils.Constants
+import com.example.dantoo.UserProfileActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_login.*
@@ -132,9 +133,14 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
         Log.i("Username: ", user.username)
         Log.i("Email: ", user.email)
 
+        if(user.profileCompleted == 0){
+            val intent = Intent(this@LoginActivity, UserProfileActivity::class.java)
+            intent.putExtra(Constants.EXTRA_USER_DETAILS, user)
+            startActivity(intent)
 
-        startActivity(Intent(this@LoginActivity, Dashboard::class.java))
-
+        }else{
+            startActivity(Intent(this@LoginActivity, Dashboard::class.java))
+        }
         finish()
 
     }

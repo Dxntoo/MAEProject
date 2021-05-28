@@ -7,6 +7,7 @@ import android.provider.MediaStore
 import android.webkit.MimeTypeMap
 
 object Constants {
+
     const val USERS: String = "users"
 
     const val ETRITE_PREFERENCES: String = "eTritePrefs"

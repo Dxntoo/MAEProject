@@ -79,11 +79,11 @@ class ProfileFragment : Fragment(){
             activity?.finish()
         }
 
-        profilePicture.setOnClickListener{
+        /*profilePicture.setOnClickListener{
             val intent = Intent(this@ProfileFragment.requireActivity(), UserProfileActivity::class.java)
             startActivity(intent)
             activity?.finish()
-        }
+        }*/
 
         viewPager.adapter = adapter
 
