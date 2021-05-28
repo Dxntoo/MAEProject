@@ -12,7 +12,7 @@
     <string name="avatar_placeholder">Avatar</string>
 
     <!--User-->
-    <string name="profile_username">Danish Ishak</string>
+    <string name="profile_username">Username</string>
     <string name="please_wait">Please Wait&#8230;</string>
     <string name="please_click_back_again_to_exit">Please click back again to exit.</string>
 
@@ -23,6 +23,9 @@
     <string name="err_msg_enter_confirm_password">Please enter confirm password.</string>
     <string name="err_msg_password_and_confirm_password_mismatch">Password and confirm password does not match.</string>
     <string name="err_msg_agree_terms_and_condition">Please agree terms and condition.</string>
+    <string name="err_msg_enter_mobile_number">Please enter mobile number.</string>
+
+    <string name="msg_profile_update_success">Your profile is updated successfully.</string>
 
     <string name="et_hint_username">Username</string>
     <string name="et_hint_email_id">Email ID</string>
@@ -34,5 +37,7 @@
     <string name="lbl_forgot_password">Forgot Password?</string>
 
     <string name="title_forgot_password">Password Reset</string>
+    <string name="rb_lbl_male">Male</string>
+    <string name="rb_lbl_female">Female</string>
 
 </resources>

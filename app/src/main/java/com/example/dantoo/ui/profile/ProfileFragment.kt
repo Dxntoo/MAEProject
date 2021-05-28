@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.dantoo.LoginActivity
+import com.example.dantoo.UserProfileActivity
 import com.example.dantoo.databinding.FragmentProfileBinding
 import com.example.dantoo.utils.Constants
 import com.example.dantoo.viewpager.PhotoFragment
@@ -22,9 +23,11 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.fragment_profile.*
 import com.example.dantoo.firestore.FirestoreClass
-import com.example.dantoo.models.User
 import com.google.firebase.auth.FirebaseUser
-
+import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.DocumentSnapshot
+import org.w3c.dom.Document
+import com.example.dantoo.models.User as User
 
 
 class ProfileFragment : Fragment(){
@@ -57,23 +60,15 @@ class ProfileFragment : Fragment(){
 
         val usernametext = binding.profileUsernameText
         val db = FirebaseFirestore.getInstance()
-
         val userid = FirestoreClass().getCurrentUserID()
+
         val usernameDB = db.collection("users").document(userid)
-
-
-
 
         usernameDB.get().addOnSuccessListener { document ->
             if(document!=null){
-                usernametext.text = "${document.data}"
+                usernametext.text = "${document.data?.get("username")}"
             }
         }
-
-
-
-
-
 
         val logout = binding.logoutBtn
 
@@ -84,10 +79,21 @@ class ProfileFragment : Fragment(){
             activity?.finish()
         }
 
+        profilePicture.setOnClickListener{
+            val intent = Intent(this@ProfileFragment.requireActivity(), UserProfileActivity::class.java)
+            startActivity(intent)
+            activity?.finish()
+        }
+
         viewPager.adapter = adapter
 
         return root
     }
+
+
+
+
+
 
 
 

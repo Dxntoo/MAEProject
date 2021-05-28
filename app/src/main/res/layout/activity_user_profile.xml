@@ -6,4 +6,118 @@
     android:layout_height="match_parent"
     tools:context=".UserProfileActivity">
 
+    <TextView
+        android:id="@+id/userprofileTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Complete Profile"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/phoneTextField"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Phone"
+        app:layout_constraintBottom_toTopOf="@+id/rg_gender"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/profilePicture"
+        android:layout_width="154dp"
+        android:layout_height="153dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/phoneTextField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userprofileTitle"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_user_placeholder" />
+
+    <RadioGroup
+        android:id="@+id/rg_gender"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_radio_button_height"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneTextField">
+
+        <com.example.dantoo.utils.MSPRadioButton
+            android:id="@+id/rb_male"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/profile_radio_button_marginStartEnd"
+            android:layout_weight="1"
+            android:background="@drawable/drawable_gender_tab_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/rb_lbl_male"
+            android:textColor="@drawable/drawable_gender_tab_text_color_selector"
+            android:textStyle="bold"
+            tools:ignore="RtlCompat" />
+
+        <com.example.dantoo.utils.MSPRadioButton
+            android:id="@+id/rb_female"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/profile_radio_button_marginStartEnd"
+            android:layout_marginLeft="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/drawable_gender_tab_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/rb_lbl_female"
+            android:textColor="@drawable/drawable_gender_tab_text_color_selector"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/completeProfileBtn"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="save changes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_gender" />
+
+    <EditText
+        android:id="@+id/usernameTextField"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/et_hint_username"
+        app:layout_constraintBottom_toTopOf="@+id/phoneTextField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilePicture" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
