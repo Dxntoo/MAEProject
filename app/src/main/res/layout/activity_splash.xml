@@ -7,15 +7,28 @@
     android:background="#3CD8A6"
     tools:context=".SplashActivity">
 
-    <TextView
+    <com.example.etrite.utils.MSPTextViewBold
         android:id="@+id/splashText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="e-Trite"
-        android:textSize="34sp"
+        android:text="@string/splash_title"
+        android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.338" />
+
+    <com.example.etrite.utils.MSPTextView
+        android:id="@+id/splashSlogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/splash_slogan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/splashText"
+        app:layout_constraintVertical_bias="0.034" />
 </androidx.constraintlayout.widget.ConstraintLayout>

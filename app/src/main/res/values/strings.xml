@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Dantoo</string>
+    <string name="app_name">e-Trite</string>
     <string name="title_activity_dashboard">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
@@ -40,5 +40,7 @@
     <string name="title_forgot_password">Password Reset</string>
     <string name="rb_lbl_male">Male</string>
     <string name="rb_lbl_female">Female</string>
+    <string name="splash_title">e-Trite</string>
+    <string name="splash_slogan">fitness made simple.</string>
 
 </resources>
