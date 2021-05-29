@@ -12,10 +12,10 @@
     <string name="avatar_placeholder">Avatar</string>
 
     <!--User-->
-    <string name="profile_username">Username</string>
+    <string name="profile_username"></string>
     <string name="please_wait">Please Wait&#8230;</string>
     <string name="please_click_back_again_to_exit">Please click back again to exit.</string>
-
+    <string name="content_description">image</string>
 
     <string name="err_msg_enter_username">Please enter username.</string>
     <string name="err_msg_enter_email">Please enter email.</string>
@@ -42,5 +42,7 @@
     <string name="rb_lbl_female">Female</string>
     <string name="splash_title">e-Trite</string>
     <string name="splash_slogan">fitness made simple.</string>
+    <string name="register_lbl">Register</string>
+    <string name="register_new_account">Register New Account</string>
 
 </resources>

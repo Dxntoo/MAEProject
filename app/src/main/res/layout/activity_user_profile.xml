@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".UserProfileActivity">
 
-    <TextView
+    <com.example.etrite.utils.MSPTextViewBold
         android:id="@+id/userprofileTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,7 +17,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+
+    <com.example.etrite.utils.MSPEditText
         android:id="@+id/phoneTextField"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -25,27 +26,40 @@
         android:layout_marginLeft="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="132dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Phone"
         app:layout_constraintBottom_toTopOf="@+id/rg_gender"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/userprofilePicture"
-        android:layout_width="154dp"
-        android:layout_height="153dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/phoneTextField"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userprofileTitle"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_user_placeholder" />
+        app:layout_constraintTop_toBottomOf="@+id/usernameTextField" />
+
+    <FrameLayout
+        android:id="@+id/fl_user_image"
+        android:layout_width="@dimen/profile_user_image_size"
+        android:layout_height="@dimen/profile_user_image_size"
+        android:layout_marginTop="@dimen/profile_user_image_marginTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_user_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/profile_user_photo_margin"
+            android:background="@color/colorLightGrey"
+            android:contentDescription="@string/content_description"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_user_placeholder" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/user_image_background" />
+    </FrameLayout>
 
     <RadioGroup
         android:id="@+id/rg_gender"
@@ -89,7 +103,7 @@
             android:textStyle="bold" />
     </RadioGroup>
 
-    <Button
+    <com.example.etrite.utils.MSPButton
         android:id="@+id/completeProfileBtn"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -97,27 +111,27 @@
         android:layout_marginLeft="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_background"
         android:text="save changes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rg_gender" />
 
-    <EditText
+    <com.example.etrite.utils.MSPEditText
         android:id="@+id/usernameTextField"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/et_hint_username"
-        app:layout_constraintBottom_toTopOf="@+id/phoneTextField"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userprofilePicture" />
+        app:layout_constraintTop_toBottomOf="@+id/fl_user_image" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

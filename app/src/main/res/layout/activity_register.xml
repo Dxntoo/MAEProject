@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3CD8A6"
+    android:background="@color/white"
     tools:context=".RegisterActivity">
 
-    <EditText
+    <com.example.etrite.utils.MSPEditText
         android:id="@+id/emailText"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -24,7 +24,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/usernameText" />
 
-    <EditText
+    <com.example.etrite.utils.MSPEditText
         android:id="@+id/passwordText"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -39,17 +39,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailText" />
 
-    <TextView
+    <com.example.etrite.utils.MSPTextView
         android:id="@+id/registerText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register New Account"
+        android:text="@string/register_new_account"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/emailText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.732" />
+        app:layout_constraintVertical_bias="0.678" />
 
     <androidx.appcompat.widget.AppCompatCheckBox
         android:id="@+id/cb_terms_and_condition"
@@ -65,7 +65,7 @@
         app:layout_constraintVertical_bias="0.614"
         tools:checked="false" />
 
-    <Button
+    <com.example.etrite.utils.MSPButton
         android:id="@+id/registerBtn"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -73,15 +73,17 @@
         android:layout_marginLeft="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:text="Register"
+        android:background="@drawable/button_background"
+        android:text="@string/register_lbl"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmPasswordText"
-        app:layout_constraintVertical_bias="0.233" />
+        app:layout_constraintTop_toBottomOf="@+id/cb_terms_and_condition"
+        app:layout_constraintVertical_bias="0.131" />
 
-    <EditText
+    <com.example.etrite.utils.MSPEditText
         android:id="@+id/confirmPasswordText"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -96,7 +98,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordText" />
 
-    <EditText
+    <com.example.etrite.utils.MSPEditText
         android:id="@+id/usernameText"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -118,8 +120,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="84dp"
-        android:layout_marginRight="84dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginRight="88dp"
         android:text="@string/i_agree_to_the_terms_and_condition"
         app:layout_constraintBottom_toTopOf="@+id/registerBtn"
         app:layout_constraintEnd_toEndOf="parent"

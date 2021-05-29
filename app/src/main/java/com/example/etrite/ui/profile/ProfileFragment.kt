@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.etrite.LoginActivity
+import com.example.etrite.UserProfileActivity
 import com.example.etrite.databinding.FragmentProfileBinding
 import com.example.etrite.viewpager.PhotoFragment
 import com.example.etrite.viewpager.PostFragment
@@ -17,6 +18,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_profile.*
 import com.example.etrite.firestore.FirestoreClass
+import com.squareup.picasso.Picasso
 
 
 class ProfileFragment : Fragment(){
@@ -48,6 +50,7 @@ class ProfileFragment : Fragment(){
 
 
         val usernametext = binding.profileUsernameText
+        val profilepicture = binding.profilePicture
         val db = FirebaseFirestore.getInstance()
         val userid = FirestoreClass().getCurrentUserID()
 
@@ -56,11 +59,13 @@ class ProfileFragment : Fragment(){
         usernameDB.get().addOnSuccessListener { document ->
             if(document!=null){
                 usernametext.text = "${document.data?.get("username")}"
+                Picasso.get().load("${document.data?.get("image")}").transform().into(profilepicture);
             }
         }
 
-        val logout = binding.logoutBtn
 
+        val logout = binding.logoutBtn
+        val editProfile = binding.editProfileBtn
 
         logout.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
@@ -68,8 +73,11 @@ class ProfileFragment : Fragment(){
             activity?.finish()
         }
 
-
-
+        editProfile.setOnClickListener {
+            val intent = (Intent(this@ProfileFragment.requireActivity(), UserProfileActivity::class.java))
+            startActivity(intent)
+            activity?.finish()
+        }
         viewPager.adapter = adapter
 
         return root

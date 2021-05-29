@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.etrite">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -9,7 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.etrite">
-        <activity android:name="com.example.etrite.UserProfileActivity"></activity>
+        <activity android:name="com.example.etrite.UserProfileActivity">
+
+        </activity>
         <activity android:name="com.example.etrite.MainActivity" />
         <activity android:name="com.example.etrite.ForgotPasswordActivity" />
         <activity android:name="com.example.etrite.SplashActivity">

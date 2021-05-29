@@ -104,9 +104,6 @@ class FirestoreClass {
             // A HashMap of fields which are to be updated.
             .update(userHashMap)
             .addOnSuccessListener {
-
-                // START
-                // Notify the success result.
                 when (activity) {
                     is UserProfileActivity -> {
                         // Call a function of base activity for transferring the result to it.

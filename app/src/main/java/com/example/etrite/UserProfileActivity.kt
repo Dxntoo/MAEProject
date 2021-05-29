@@ -43,14 +43,14 @@ class UserProfileActivity : BaseActivity(), View.OnClickListener {
         usernameTextField.setText(muserDetails.username)
 
 
-        userprofilePicture.setOnClickListener(this@UserProfileActivity)
+        iv_user_photo.setOnClickListener(this@UserProfileActivity)
         completeProfileBtn.setOnClickListener(this@UserProfileActivity)
     }
 
     override fun onClick(v: View?){
         if (v!=null){
             when(v.id){
-                R.id.userprofilePicture ->{
+                R.id.iv_user_photo ->{
                     if (ContextCompat.checkSelfPermission(
                             this,
                             Manifest.permission.READ_EXTERNAL_STORAGE
@@ -93,33 +93,11 @@ class UserProfileActivity : BaseActivity(), View.OnClickListener {
                     }else{
 
                         updateUserProfileDetails()
+                        startActivity(Intent(this@UserProfileActivity, Dashboard::class.java))
+                        finish()
                     }
 
 
-
-//                        val userHashMap = HashMap<String, Any>()
-//
-//
-//                        val mobileNumber = et_mobile_number.text.toString().trim{ it <= ' '}
-//
-//                        val gender = if(rb_male.isChecked){
-//                            Constants.MALE
-//                        }else{
-//                            Constants.FEMALE
-//                        }
-//
-//                        if(mobileNumber.isNotEmpty()){
-//                            userHashMap[Constants.MOBILE] = mobileNumber.toLong()
-//                        }
-//
-//                        userHashMap[Constants.GENDER] = gender
-//
-//                        showProgressDialog(resources.getString(R.string.please_wait))
-//
-//                        FirestoreClass().updateUserProfileData(
-//                                this@UserProfileActivity,
-//                                userHashMap
-//                        )
 
                 }
             }
@@ -156,7 +134,7 @@ class UserProfileActivity : BaseActivity(), View.OnClickListener {
 
                         GlideLoader(this@UserProfileActivity).loadUserPicture(
                             mSelectedImageFileUri!!,
-                            userprofilePicture
+                            iv_user_photo
                         )
                     } catch (e: IOException){
                         e.printStackTrace()

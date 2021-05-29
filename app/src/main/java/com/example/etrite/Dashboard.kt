@@ -8,7 +8,11 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.etrite.databinding.ActivityDashboardBinding
+import com.example.etrite.firestore.FirestoreClass
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_profile.*
+
+
 
 class Dashboard : AppCompatActivity() {
 
@@ -34,6 +38,7 @@ class Dashboard : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
 
 
 
