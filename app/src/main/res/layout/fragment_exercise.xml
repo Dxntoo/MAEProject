@@ -1,13 +1,349 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.exercise.ExerciseFragment">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.example.etrite.utils.MSPTextViewBold
+                android:id="@+id/exerciseTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Exercise"
+                android:textSize="60sp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="328dp" />
+
+            <TextView
+                android:id="@+id/recommendedTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Recommended For You"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="328dp" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="362dp"
+                android:layout_height="209dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/ppl"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="74dp" />
+
+            <TextView
+                android:id="@+id/todayExerciseTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Today's Exercise"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView16"
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ppl"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="74dp" />
+
+                    <ImageView
+                        android:id="@+id/imageView20"
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ppl"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="74dp" />
+
+                    <ImageView
+                        android:id="@+id/imageView21"
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ppl"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="74dp" />
+
+                    <ImageView
+                        android:id="@+id/imageView22"
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ppl"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="74dp" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/weightliftTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Weightlifting"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView23"
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ppl"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="74dp" />
+
+                    <ImageView
+                        android:id="@+id/imageView24"
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ppl"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="74dp" />
+
+                    <ImageView
+                        android:id="@+id/imageView25"
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ppl"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="74dp" />
+
+                    <ImageView
+                        android:id="@+id/imageView26"
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ppl"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="74dp" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/bodyweightTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Bodyweight"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView27"
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ppl"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="74dp" />
+
+                    <ImageView
+                        android:id="@+id/imageView28"
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ppl"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="74dp" />
+
+                    <ImageView
+                        android:id="@+id/imageView29"
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ppl"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="74dp" />
+
+                    <ImageView
+                        android:id="@+id/imageView30"
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ppl"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="74dp" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme" />
+
+            <com.example.etrite.utils.MSPTextViewBold
+                android:id="@+id/recipeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Recipe"
+                android:textSize="60sp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="328dp" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView32"
+                    android:layout_width="110dp"
+                    android:layout_height="99dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/ppl"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView35"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView35"
+                    android:layout_width="110dp"
+                    android:layout_height="99dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/ppl"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView36"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView36"
+                    android:layout_width="110dp"
+                    android:layout_height="99dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:src="@drawable/ppl"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView37"
+                    android:layout_width="110dp"
+                    android:layout_height="99dp"
+                    android:layout_marginStart="148dp"
+                    android:layout_marginLeft="148dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="26dp"
+                    android:layout_marginRight="26dp"
+                    android:src="@drawable/ppl"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView38"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView35" />
+
+                <ImageView
+                    android:id="@+id/imageView38"
+                    android:layout_width="110dp"
+                    android:layout_height="99dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ppl"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView36" />
+
+                <ImageView
+                    android:id="@+id/imageView39"
+                    android:layout_width="110dp"
+                    android:layout_height="99dp"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/ppl"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView37"
+                    app:layout_constraintHorizontal_bias="0.666"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView32" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
