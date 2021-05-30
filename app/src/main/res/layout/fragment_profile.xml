@@ -8,7 +8,7 @@
     tools:context=".ui.exercise.ExerciseFragment">
 
 
-    <TextView
+    <com.example.etrite.utils.MSPTextViewBold
         android:id="@+id/profileUsernameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,6 +16,7 @@
         android:layout_marginLeft="52dp"
         android:text="@string/profile_username"
         android:textSize="20sp"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/viewpager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -30,6 +31,7 @@
         android:layout_marginStart="72dp"
         android:layout_marginLeft="72dp"
         android:contentDescription="@string/profilepicture"
+        android:scaleType="centerCrop"
         android:src="@drawable/ic_baseline_account_circle_24"
         app:layout_constraintBottom_toTopOf="@+id/viewpager"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,8 +40,8 @@
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewpager"
-        android:layout_width="0dp"
-        android:layout_height="619dp"
+        android:layout_width="411dp"
+        android:layout_height="632dp"
         android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

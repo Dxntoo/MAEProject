@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".PersonalPostFragment">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="367dp"
+        android:layout_height="456dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/rounded_rectangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="255dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/ic_user_placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="300dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="16dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo vel fringilla est ullamcorper eget nulla facilisi. In metus vulputate eu scelerisque felis imperdiet. Facilisis mauris sit amet massa vitae tortor. Suspendisse in est ante in nibh. Integer eget aliquet nibh praesent tristique magna sit amet. Vivamus arcu felis bibendum ut. Faucibus et molestie ac feugiat sed lectus vestibulum mattis. Nunc pulvinar sapien et ligula ullamcorper malesuada. Diam vel quam elementum pulvinar etiam non quam. Egestas erat imperdiet sed euismod nisi. Leo a diam sollicitudin tempor. Aliquam faucibus purus in massa tempor nec. Nunc sed blandit libero volutpat sed cras. Ut ornare lectus sit amet est placerat. Habitant morbi tristique senectus et netus. Nulla pharetra diam sit amet nisl."
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.043" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
