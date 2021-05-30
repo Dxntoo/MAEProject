@@ -1,6 +1,8 @@
 package com.example.etrite
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -8,8 +10,13 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.etrite.databinding.ActivityDashboardBinding
+import com.example.etrite.databinding.FragmentProfileBinding
 import com.example.etrite.firestore.FirestoreClass
+import com.example.etrite.models.User
+import com.example.etrite.utils.Constants
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_dashboard.*
+import kotlinx.android.synthetic.main.activity_user_profile.*
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 
@@ -17,7 +24,6 @@ import kotlinx.android.synthetic.main.fragment_profile.*
 class Dashboard : AppCompatActivity() {
 
     private lateinit var binding: ActivityDashboardBinding
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,11 +45,11 @@ class Dashboard : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-
-
+        FirestoreClass().getUserDetails(this@Dashboard)
 
 
     }
+
 
 
 

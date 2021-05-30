@@ -16,17 +16,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/editProfileBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
-                android:text="Button"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewpager"
                 android:layout_width="0dp"
@@ -37,20 +26,6 @@
 
             </androidx.viewpager2.widget.ViewPager2>
 
-            <com.example.etrite.utils.MSPButton
-                android:id="@+id/logoutBtn"
-                android:layout_width="89dp"
-                android:layout_height="36dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                android:background="@drawable/red_button_background"
-                android:text="Logout"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toTopOf="@+id/viewpager"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.47" />
-
             <ImageView
                 android:id="@+id/profilePicture"
                 android:layout_width="59dp"
@@ -58,21 +33,22 @@
                 android:src="@drawable/ic_baseline_account_circle_24"
                 app:layout_constraintBottom_toTopOf="@+id/viewpager"
                 app:layout_constraintEnd_toStartOf="@+id/profileUsernameText"
-                app:layout_constraintHorizontal_bias="0.46"
+                app:layout_constraintHorizontal_bias="0.107"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/profileUsernameText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="64dp"
-                android:layout_marginRight="64dp"
+                android:layout_marginEnd="204dp"
+                android:layout_marginRight="204dp"
                 android:text="@string/profile_username"
                 app:layout_constraintBottom_toTopOf="@+id/viewpager"
-                app:layout_constraintEnd_toStartOf="@+id/logoutBtn"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.492" />
+                app:layout_constraintVertical_bias="0.363" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

@@ -4,11 +4,14 @@ package com.example.etrite.firestore
 import android.app.Activity
 import android.content.Context
 import android.net.Uri
+import android.provider.ContactsContract
 import android.util.Log
+import com.example.etrite.Dashboard
 import com.example.etrite.LoginActivity
 import com.example.etrite.RegisterActivity
 import com.example.etrite.UserProfileActivity
 import com.example.etrite.models.User
+import com.example.etrite.ui.profile.ProfileFragment
 import com.example.etrite.utils.Constants
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -78,6 +81,10 @@ class FirestoreClass {
                         // Call a function of base activity for transferring the result to it.
                         activity.userLoggedInSuccess(user)
                     }
+                    is Dashboard ->{
+
+                    }
+
                 }
                 // END
             }
@@ -129,17 +136,17 @@ class FirestoreClass {
             }
     }
 
-    fun uploadImageToCloudStorage(activity: Activity, imageFileURI: Uri?) {
+    fun uploadImageToCloudStorage(activity: Activity, imageFileURI: Uri?, imageType: String) {
 
         //getting the storage reference
         val sRef: StorageReference = FirebaseStorage.getInstance().reference.child(
-            Constants.USER_PROFILE_IMAGE + System.currentTimeMillis() + "."
+            imageType + System.currentTimeMillis() + "."
                     + Constants.getFileExtension(
                 activity,
                 imageFileURI
             )
         )
-        Log.e("Uploaded",imageFileURI!!.toString())
+
         //adding the file to reference
         sRef.putFile(imageFileURI!!)
             .addOnSuccessListener { taskSnapshot ->
@@ -154,15 +161,16 @@ class FirestoreClass {
                     .addOnSuccessListener { uri ->
                         Log.e("Downloadable Image URL", uri.toString())
 
-                        // TODO Step 8: Pass the success result to base class.
-                        // START
                         // Here call a function of base activity for transferring the result to it.
                         when (activity) {
                             is UserProfileActivity -> {
                                 activity.imageUploadSuccess(uri.toString())
                             }
+
+                            /*is AddProductActivity -> {
+                                activity.imageUploadSuccess(uri.toString())
+                            }*/
                         }
-                        // END
                     }
             }
             .addOnFailureListener { exception ->
@@ -172,6 +180,10 @@ class FirestoreClass {
                     is UserProfileActivity -> {
                         activity.hideProgressDialog()
                     }
+
+                    /*is AddProductActivity -> {
+                        activity.hideProgressDialog()
+                    }*/
                 }
 
                 Log.e(

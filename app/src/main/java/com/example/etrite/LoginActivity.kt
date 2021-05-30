@@ -133,6 +133,7 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
             startActivity(intent)
 
         }else{
+            intent.putExtra(Constants.EXTRA_USER_DETAILS, user)
             startActivity(Intent(this@LoginActivity, Dashboard::class.java))
         }
         finish()

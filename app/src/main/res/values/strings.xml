@@ -16,7 +16,7 @@
     <string name="please_wait">Please Wait&#8230;</string>
     <string name="please_click_back_again_to_exit">Please click back again to exit.</string>
     <string name="content_description">image</string>
-
+    <string name="email_sent_success">\"Email sent successfully to reset your password! \"</string>
     <string name="err_msg_enter_username">Please enter username.</string>
     <string name="err_msg_enter_email">Please enter email.</string>
     <string name="err_msg_enter_password">Please enter password.</string>
@@ -44,5 +44,8 @@
     <string name="splash_slogan">fitness made simple.</string>
     <string name="register_lbl">Register</string>
     <string name="register_new_account">Register New Account</string>
+    <string name="submit">Submit</string>
+    <string name="complete_profile">Complete Profile</string>
+    <string name="phone">Phone</string>
 
 </resources>

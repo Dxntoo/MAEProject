@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Complete Profile"
+        android:text="@string/complete_profile"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,12 +29,29 @@
         android:layout_marginBottom="132dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Phone"
+        android:text="@string/phone"
         app:layout_constraintBottom_toTopOf="@+id/rg_gender"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/usernameTextField" />
+        app:layout_constraintTop_toBottomOf="@+id/usernameTextField"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.example.etrite.utils.MSPEditText
+        android:id="@+id/emailTextField"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/et_hint_email_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneTextField" />
 
     <FrameLayout
         android:id="@+id/fl_user_image"
@@ -66,12 +83,12 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/profile_radio_button_height"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phoneTextField">
+        tools:layout_editor_absoluteY="398dp">
 
         <com.example.etrite.utils.MSPRadioButton
             android:id="@+id/rb_male"
@@ -104,7 +121,7 @@
     </RadioGroup>
 
     <com.example.etrite.utils.MSPButton
-        android:id="@+id/completeProfileBtn"
+        android:id="@+id/saveBtn"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
@@ -125,12 +142,14 @@
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/et_hint_username"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fl_user_image" />
 
