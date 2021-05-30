@@ -8,6 +8,9 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.etrite.databinding.FragmentDashboardBinding
+import com.example.etrite.firestore.FirestoreClass
+import com.google.firebase.firestore.FirebaseFirestore
+import com.squareup.picasso.Picasso
 
 class DashboardFragment : Fragment() {
 
@@ -30,6 +33,17 @@ class DashboardFragment : Fragment() {
         val root: View = binding.root
 
         val textView: TextView = binding.greetingText
+
+        val db = FirebaseFirestore.getInstance()
+        val userid = FirestoreClass().getCurrentUserID()
+
+        val usernameDB = db.collection("users").document(userid)
+
+        usernameDB.get().addOnSuccessListener { document ->
+            if(document!=null){
+                textView.text = "Hello there, ${document.data?.get("username")}"
+            }
+        }
 
         return root
     }

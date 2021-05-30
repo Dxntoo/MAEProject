@@ -22,8 +22,9 @@ import kotlinx.android.synthetic.main.fragment_profile.*
 import com.example.etrite.firestore.FirestoreClass
 import com.example.etrite.models.User
 import com.example.etrite.utils.Constants
+import com.example.etrite.utils.GlideLoader
 import com.squareup.picasso.Picasso
-
+import kotlinx.android.synthetic.main.activity_profile.*
 
 
 class ProfileFragment : Fragment(){
@@ -64,7 +65,12 @@ class ProfileFragment : Fragment(){
         usernameDB.get().addOnSuccessListener { document ->
             if(document!=null){
                 usernametext.text = "${document.data?.get("username")}"
-                Picasso.get().load("${document.data?.get("image")}").into(profilepicture);
+                if("${document.data?.get("image")}".isEmpty()){
+
+                }else{
+                    Picasso.get().load("${document.data?.get("image")}").into(profilepicture);
+                }
+
             }
         }
 

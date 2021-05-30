@@ -41,7 +41,7 @@ class UserProfileActivity : BaseActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         // This is used to align the xml view to this class
         setContentView(R.layout.activity_user_profile)
-
+        supportActionBar?.hide()
         if (intent.hasExtra(Constants.EXTRA_USER_DETAILS)) {
             // Get the user details from intent as a ParcelableExtra.
             mUserDetails = intent.getParcelableExtra(Constants.EXTRA_USER_DETAILS)!!
@@ -52,14 +52,11 @@ class UserProfileActivity : BaseActivity(), View.OnClickListener {
             // Update the title of the screen to complete profile.
             userprofileTitle.text = resources.getString(R.string.complete_profile)
 
-            // Here, the some of the edittext components are disabled because it is added at a time of Registration.
 
-            emailTextField.isEnabled = false
-            emailTextField.setText(mUserDetails.email)
         } else {
 
             // Update the title of the screen to edit profile.
-            userprofileTitle.text = resources.getString(R.string.complete_profile)
+            userprofileTitle.text = resources.getString(R.string.edit_profile)
 
             // Load the image using the GlideLoader class with the use of Glide Library.
             GlideLoader(this@UserProfileActivity).loadUserPicture(mUserDetails.image, iv_user_photo)
@@ -242,7 +239,7 @@ class UserProfileActivity : BaseActivity(), View.OnClickListener {
         // Get the FirstName from editText and trim the space
         val username = usernameTextField.text.toString().trim { it <= ' ' }
         if (username != mUserDetails.username) {
-            userHashMap[Constants.LOGGED_IN_USERNAME] = username
+            userHashMap[Constants.USERNAME] = username
         }
 
 

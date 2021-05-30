@@ -6,10 +6,7 @@ import android.content.Context
 import android.net.Uri
 import android.provider.ContactsContract
 import android.util.Log
-import com.example.etrite.Dashboard
-import com.example.etrite.LoginActivity
-import com.example.etrite.RegisterActivity
-import com.example.etrite.UserProfileActivity
+import com.example.etrite.*
 import com.example.etrite.models.User
 import com.example.etrite.ui.profile.ProfileFragment
 import com.example.etrite.utils.Constants
@@ -81,8 +78,9 @@ class FirestoreClass {
                         // Call a function of base activity for transferring the result to it.
                         activity.userLoggedInSuccess(user)
                     }
-                    is Dashboard ->{
-
+                    is ProfileActivity -> {
+                        // Call a function of base activity for transferring the result to it.
+                        activity.userDetailsSuccess(user)
                     }
 
                 }

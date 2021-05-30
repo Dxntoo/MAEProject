@@ -26,7 +26,7 @@ class ProfileActivity : BaseActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         // This is used to align the xml view to this class
         setContentView(R.layout.activity_profile)
-
+        supportActionBar?.hide()
         editProfileBtn.setOnClickListener(this@ProfileActivity)
         saveBtn.setOnClickListener(this@ProfileActivity)
     }
@@ -59,10 +59,6 @@ class ProfileActivity : BaseActivity(), View.OnClickListener {
             }
         }
     }
-
-    /**
-     * A function for actionBar Setup.
-     */
 
 
     /**

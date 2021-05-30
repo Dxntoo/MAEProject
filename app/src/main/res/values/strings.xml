@@ -47,5 +47,8 @@
     <string name="submit">Submit</string>
     <string name="complete_profile">Complete Profile</string>
     <string name="phone">Phone</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="profilepicture">Avatar</string>
+    <string name="add_new_meal">Add New Meal</string>
 
 </resources>
