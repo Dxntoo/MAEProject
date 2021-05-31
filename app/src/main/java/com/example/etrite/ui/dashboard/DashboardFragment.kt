@@ -1,5 +1,6 @@
 package com.example.etrite.ui.dashboard
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -43,6 +44,13 @@ class DashboardFragment : Fragment() {
             if(document!=null){
                 textView.text = "Hello there, ${document.data?.get("username")}"
             }
+        }
+
+        val addnewmeal = binding.addNewMealBtn
+
+        addnewmeal.setOnClickListener{
+            startActivity(Intent(this@DashboardFragment.requireActivity(), AddNewMealActivity::class.java))
+            activity?.finish()
         }
 
         return root

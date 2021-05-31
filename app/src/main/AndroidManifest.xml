@@ -11,8 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.etrite">
-        <activity android:name=".ProfileActivity"></activity>
-        <activity android:name=".UserProfileActivity"></activity>
+        <activity android:name=".AddNewMealActivity"></activity>
+        <activity android:name=".FoodItemActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".UserProfileActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ForgotPasswordActivity" />
         <activity android:name=".SplashActivity">

@@ -1,4 +1,4 @@
-package com.example.etrite.ui.notifications
+package com.example.etrite.ui.chatroom
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,12 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.etrite.databinding.FragmentNotificationsBinding
+import com.example.etrite.databinding.FragmentChatroomBinding
 
-class NotificationsFragment : Fragment() {
+class ChatroomFragment : Fragment() {
 
-    private lateinit var notificationsViewModel: NotificationsViewModel
-    private var _binding: FragmentNotificationsBinding? = null
+    private lateinit var chatroomViewModel: ChatroomViewModel
+    private var _binding: FragmentChatroomBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,10 +22,10 @@ class NotificationsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        notificationsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
+        chatroomViewModel =
+            ViewModelProvider(this).get(ChatroomViewModel::class.java)
 
-        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        _binding = FragmentChatroomBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
 

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_200"
+    tools:context=".ui.chatroom.ChatroomFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.example.etrite.utils.MSPTextViewBold
+                android:id="@+id/chatroomTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/title_chatroom"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.example.etrite.utils.MSPButton
+                        android:id="@+id/categoryBtn"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/pill_rectangle"
+                        android:text="Bodyweight"
+                        android:textColor="@color/teal_200" />
+
+                    <com.example.etrite.utils.MSPButton
+                        android:id="@+id/categoryBtn9"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:background="@drawable/pill_rectangle"
+                        android:text="Weightlifting"
+                        android:textColor="@color/black" />
+
+                    <com.example.etrite.utils.MSPButton
+                        android:id="@+id/categoryBtn10"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/pill_rectangle"
+                        android:text="Cardio"
+                        android:textColor="@color/colorThemeOrange" />
+
+                    <com.example.etrite.utils.MSPButton
+                        android:id="@+id/categoryBtn11"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/pill_rectangle"
+                        android:text="HIIT"
+                        android:textColor="@color/colorDarkGrey" />
+
+                    <com.example.etrite.utils.MSPButton
+                        android:id="@+id/categoryBtn12"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/pill_rectangle"
+                        android:text="Powerlifting"
+                        android:textSize="12dp"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView17"
+                android:name="com.example.etrite.ChatroomSelectionFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView22"
+                android:name="com.example.etrite.ChatroomSelectionFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView25"
+                android:name="com.example.etrite.ChatroomSelectionFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView18"
+                android:name="com.example.etrite.ChatroomSelectionFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView24"
+                android:name="com.example.etrite.ChatroomSelectionFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView20"
+                android:name="com.example.etrite.ChatroomSelectionFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView19"
+                android:name="com.example.etrite.ChatroomSelectionFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView21"
+                android:name="com.example.etrite.ChatroomSelectionFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView23"
+                android:name="com.example.etrite.ChatroomSelectionFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

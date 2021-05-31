@@ -260,79 +260,50 @@
                 tools:layout_editor_absoluteY="328dp" />
 
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <ImageView
+                android:id="@+id/recipeImage"
+                android:layout_width="360dp"
+                android:layout_height="238dp"
+                android:layout_margin="20dp"
+                android:src="@drawable/burger_and_fries" />
+
+            <com.example.etrite.utils.MSPTextView
+                android:id="@+id/foodName"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Hamburger and Fries"
+                android:textSize="20sp" />
 
-                <ImageView
-                    android:id="@+id/imageView32"
-                    android:layout_width="110dp"
-                    android:layout_height="99dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:src="@drawable/ppl"
-                    app:layout_constraintEnd_toStartOf="@+id/imageView35"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/recipeImage1"
+                android:layout_width="360dp"
+                android:layout_height="238dp"
+                android:layout_margin="20dp"
+                android:src="@drawable/burger_and_fries" />
 
-                <ImageView
-                    android:id="@+id/imageView35"
-                    android:layout_width="110dp"
-                    android:layout_height="99dp"
-                    android:layout_marginEnd="12dp"
-                    android:layout_marginRight="12dp"
-                    android:src="@drawable/ppl"
-                    app:layout_constraintEnd_toStartOf="@+id/imageView36"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <com.example.etrite.utils.MSPTextView
+                android:id="@+id/foodName1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Hamburger and Fries"
+                android:textSize="20sp" />
 
-                <ImageView
-                    android:id="@+id/imageView36"
-                    android:layout_width="110dp"
-                    android:layout_height="99dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginRight="24dp"
-                    android:src="@drawable/ppl"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/recipeImage2"
+                android:layout_width="360dp"
+                android:layout_height="238dp"
+                android:layout_margin="20dp"
+                android:src="@drawable/burger_and_fries" />
 
-                <ImageView
-                    android:id="@+id/imageView37"
-                    android:layout_width="110dp"
-                    android:layout_height="99dp"
-                    android:layout_marginStart="148dp"
-                    android:layout_marginLeft="148dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginEnd="26dp"
-                    android:layout_marginRight="26dp"
-                    android:src="@drawable/ppl"
-                    app:layout_constraintEnd_toStartOf="@+id/imageView38"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView35" />
-
-                <ImageView
-                    android:id="@+id/imageView38"
-                    android:layout_width="110dp"
-                    android:layout_height="99dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    android:src="@drawable/ppl"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView36" />
-
-                <ImageView
-                    android:id="@+id/imageView39"
-                    android:layout_width="110dp"
-                    android:layout_height="99dp"
-                    android:layout_marginTop="24dp"
-                    android:src="@drawable/ppl"
-                    app:layout_constraintEnd_toStartOf="@+id/imageView37"
-                    app:layout_constraintHorizontal_bias="0.666"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView32" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.example.etrite.utils.MSPTextView
+                android:id="@+id/foodName2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Hamburger and Fries"
+                android:textSize="20sp" />
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar3"
