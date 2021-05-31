@@ -32,10 +32,7 @@ class UserProfileActivity : BaseActivity(), View.OnClickListener {
     private var mSelectedImageFileUri: Uri? = null
 
     private var mUserProfileImageURL: String = ""
-
-    /**
-     * This function is auto created by Android when the Activity Class is created.
-     */
+Z
     override fun onCreate(savedInstanceState: Bundle?) {
         //This call the parent constructor
         super.onCreate(savedInstanceState)
@@ -233,10 +230,8 @@ class UserProfileActivity : BaseActivity(), View.OnClickListener {
      * A function to update user profile details to the firestore.
      */
     private fun updateUserProfileDetails() {
-
         val userHashMap = HashMap<String, Any>()
 
-        // Get the FirstName from editText and trim the space
         val username = usernameTextField.text.toString().trim { it <= ' ' }
         if (username != mUserDetails.username) {
             userHashMap[Constants.USERNAME] = username
@@ -263,14 +258,10 @@ class UserProfileActivity : BaseActivity(), View.OnClickListener {
             userHashMap[Constants.GENDER] = gender
         }
 
-        // Here if user is about to complete the profile then update the field or else no need.
-        // 0: User profile is incomplete.
-        // 1: User profile is completed.
         if (mUserDetails.profileCompleted == 0) {
             userHashMap[Constants.COMPLETE_PROFILE] = 1
         }
 
-        // call the registerUser function of FireStore class to make an entry in the database.
         FirestoreClass().updateUserProfileData(
             this@UserProfileActivity,
             userHashMap

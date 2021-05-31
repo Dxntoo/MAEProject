@@ -26,7 +26,6 @@ import com.example.etrite.utils.GlideLoader
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_profile.*
 
-
 class ProfileFragment : Fragment(){
     private lateinit var profileViewModel: ProfileViewModel
     private var _binding: FragmentProfileBinding? = null
@@ -87,8 +86,6 @@ class ProfileFragment : Fragment(){
 
         return root
     }
-
-
 
     override fun onDestroyView() {
         super.onDestroyView()

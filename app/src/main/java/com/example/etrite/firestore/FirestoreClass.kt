@@ -56,16 +56,14 @@ class FirestoreClass {
 
     fun getUserDetails(activity: Activity) {
 
-        // Here we pass the collection name from which we wants the data.
         mFireStore.collection(Constants.USERS)
-            // The document id to get the Fields of user.
+
             .document(getCurrentUserID())
             .get()
             .addOnSuccessListener { document ->
 
                 Log.i(activity.javaClass.simpleName, document.toString())
 
-                // Here we have received the document snapshot which is converted into the User Data model object.
                 val user = document.toObject(User::class.java)!!
 
                 val sharedPreferences = activity.getSharedPreferences(
@@ -165,9 +163,6 @@ class FirestoreClass {
                                 activity.imageUploadSuccess(uri.toString())
                             }
 
-                            /*is AddProductActivity -> {
-                                activity.imageUploadSuccess(uri.toString())
-                            }*/
                         }
                     }
             }
@@ -179,9 +174,6 @@ class FirestoreClass {
                         activity.hideProgressDialog()
                     }
 
-                    /*is AddProductActivity -> {
-                        activity.hideProgressDialog()
-                    }*/
                 }
 
                 Log.e(
