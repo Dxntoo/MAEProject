@@ -36,7 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/searchFood" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView26"
+        android:id="@+id/foodContainer"
         android:name="com.example.etrite.ui.FoodFragment"
         android:layout_width="412dp"
         android:layout_height="200dp"

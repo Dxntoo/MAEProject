@@ -7,7 +7,7 @@
     tools:context=".ChatroomSelectionFragment">
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/chatroomBar"
         android:layout_width="387dp"
         android:layout_height="93dp"
         android:layout_margin="10dp"
@@ -26,7 +26,7 @@
         android:src="@drawable/ic_baseline_account_circle_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/chatroomName"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/chatroomBar"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.516" />
 

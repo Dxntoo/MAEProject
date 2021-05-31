@@ -51,7 +51,7 @@ class DashboardFragment : Fragment() {
 
         addnewmeal.setOnClickListener{
             startActivity(Intent(this@DashboardFragment.requireActivity(), AddNewMealActivity::class.java))
-            activity?.finish()
+
         }
 
         return root

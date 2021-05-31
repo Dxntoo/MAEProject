@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.etrite.databinding.FragmentChatroomBinding
+import com.example.etrite.databinding.FragmentFoodBinding
 
 class ChatroomFragment : Fragment() {
 
@@ -22,6 +23,8 @@ class ChatroomFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+
         chatroomViewModel =
             ViewModelProvider(this).get(ChatroomViewModel::class.java)
 

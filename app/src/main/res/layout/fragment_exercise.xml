@@ -36,7 +36,7 @@
                 tools:layout_editor_absoluteY="328dp" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/recommendedImage"
                 android:layout_width="362dp"
                 android:layout_height="209dp"
                 android:layout_marginStart="16dp"

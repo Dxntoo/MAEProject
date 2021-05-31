@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.etrite.AddFoodItemActivity
+import com.example.etrite.AddNewMealActivity
 import com.example.etrite.FoodItemActivity
 import com.example.etrite.databinding.FragmentFoodBinding
 
@@ -27,11 +29,12 @@ class FoodFragment : Fragment() {
         val foodItem = binding.foodItemBar
 
         foodItem.setOnClickListener{
-            val intent = Intent(this@FoodFragment.requireActivity(), FoodItemActivity::class.java)
+            val intent = Intent(this@FoodFragment.requireActivity(), AddFoodItemActivity::class.java)
             startActivity(intent)
         }
 
         return root
+
 
 
     }

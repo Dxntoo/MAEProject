@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatroomActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_300"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.etrite.utils.MSPTextViewBold
+        android:id="@+id/chatroomNameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weightlifting"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar4"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar4"
+        app:layout_constraintStart_toStartOf="@+id/toolbar4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="673dp"
+        app:layout_constraintBottom_toBottomOf="@+id/chatroomTextField"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <com.example.etrite.utils.MSPEditText
+        android:id="@+id/chatroomTextField"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:ems="10"
+        android:hint="Start typing..."
+        android:inputType="textShortMessage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

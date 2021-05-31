@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecipeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/recipeHeader"
+                android:layout_width="458dp"
+                android:layout_height="306dp"
+                app:srcCompat="@drawable/burger_and_fries" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.etrite.utils.MSPTextViewBold
+                    android:id="@+id/recipeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Hamburger and Fries"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.087"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.example.etrite.utils.MSPTextViewBold
+                    android:id="@+id/recipeDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Ingredients"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.049"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recipeTitle" />
+
+                <com.example.etrite.utils.MSPTextViewBold
+                    android:id="@+id/recipeDirections"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Directions"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.722"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recipeTitle" />
+
+                <TextView
+                    android:id="@+id/recipeStep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:text="3 large Idaho potatoes"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recipeDescription" />
+
+                <TextView
+                    android:id="@+id/recipeStep2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:text="8 cups vegetable oil"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recipeStep" />
+
+                <TextView
+                    android:id="@+id/recipeStep3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Salt and Ground Pepper"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recipeStep2" />
+
+                <TextView
+                    android:id="@+id/recipeStep4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="3 pounds ground sirloin"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recipeStep3" />
+
+                <TextView
+                    android:id="@+id/recipeStep5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="6 slices provolone cheese"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recipeStep4" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="222dp"
+                    android:layout_height="115dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:text="1. Rinse and cut the potatoes lengthwise into 1/4-inch-by-1/4-inch-length fingers and hold in cold water in the refrigerator for 3 hours and up to 1 day. During the soak for the potatoes, change the water out at least once. This will help remove some of the starch from the potatoes and result in a better fry.  "
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recipeDirections" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="223dp"
+                    android:layout_height="154dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:text="2. After soaking the potatoes, remove from the water and pat dry. Heat the vegetable oil in a deep-fryer to 300 degrees F. Pre-cook the potatoes for 3 minutes, blanching them. After blanching, return them to the refrigerator for at least 1 hour. The cooling helps to create crispier skin during the second cooking. To finish, raise the fryer temperature to 350 degrees F. Remove the fries from the refrigerator. Load the fries into the baskets no more than one-third the depth of the baskets, and cook until crisp, a final 3 to 4 minutes. Remove and allow the oil to drip off. Season with salt and pepper.  "
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="226dp"
+                    android:layout_height="81dp"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:text="3. For the burgers: In a bowl, blend the sirloin with the salt and pepper, mixing well but do not over mix. Over mixing will result in tough burgers. Portion the meat into 6 equal balls. Next, between two 5-to-6-inch plates, with parchment paper on each plate, press the balls into 1-inch-thick patties.  "
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="223dp"
+                    android:layout_height="154dp"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:text='4. To cook, heat a large pan over medium heat with the grapeseed oil until hot, about1 minute. After heating the oil, add the burgers, reduce the heat to medium and cook on the first side, 4 to 5 minutes. Then flip the burgers and cook, another 4 to 5 minutes. After cooking the second side, add the cheese and turn the heat off. The burgers will finish with "carry over" cooking, and this will allow the cheese to melt.  '
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="223dp"
+                    android:layout_height="154dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:text="5. During the carry over cooking, heat a second pan over medium heat with the butter to coat the bottom of the pan, about 1 minute. Once the butter is heated, add the buns in batches and brown. This will take 1 to 2 minutes. Remove the buns once browned and repeat the process with the remaining buns.  "
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="223dp"
+                    android:layout_height="154dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:text="6. To build a burger, place a romaine leaf, tomato slice and cheesed burger on the bottom bun. Finish with the onion ring and bun top. Repeat for remaining burgers. Serve with the fries. "
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

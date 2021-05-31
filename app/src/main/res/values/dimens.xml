@@ -59,5 +59,6 @@
     <dimen name="settings_lbl_addresses_textSize">18sp</dimen>
     <dimen name="settings_button_marginStartEnd">50dp</dimen>
     <dimen name="settings_button_marginTopBottom">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 
 </resources>

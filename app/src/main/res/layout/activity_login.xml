@@ -8,7 +8,7 @@
     android:background="#3CD8A6"
     tools:context=".LoginActivity">
 
-    <EditText
+    <com.example.etrite.utils.MSPEditText
         android:id="@+id/emailTextField"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -27,7 +27,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <EditText
+    <com.example.etrite.utils.MSPEditText
         android:id="@+id/passwordTextField"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -41,16 +41,19 @@
         app:layout_constraintStart_toStartOf="@+id/emailTextField"
         app:layout_constraintTop_toBottomOf="@+id/emailTextField" />
 
-    <Button
+    <com.example.etrite.utils.MSPButton
         android:id="@+id/loginBtn"
         android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/pill_rectangle"
         android:text="Login"
         app:layout_constraintEnd_toEndOf="@+id/passwordTextField"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/passwordTextField"
         app:layout_constraintTop_toBottomOf="@+id/passwordTextField" />
 
-    <TextView
+    <com.example.etrite.utils.MSPTextViewBold
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -61,7 +64,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <com.example.etrite.utils.MSPButton
         android:id="@+id/signupBtn"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -70,6 +73,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:text="Sign Up"
+        android:textColor="@color/white"
         app:backgroundTint="@color/teal_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

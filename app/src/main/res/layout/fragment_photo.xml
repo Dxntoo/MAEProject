@@ -7,15 +7,29 @@
     tools:context=".viewpager.PhotoFragment">
 
 
-    <TextView
+    <com.example.etrite.utils.MSPTextViewBold
         android:id="@+id/photoText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Photo"
+        android:textColor="@color/white"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.etrite.utils.MSPTextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="no photos uploaded! :("
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photoText"
+        app:layout_constraintVertical_bias="0.372" />
 </androidx.constraintlayout.widget.ConstraintLayout>

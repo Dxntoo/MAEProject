@@ -15,9 +15,9 @@ class FoodItemActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
 
-        val logoutBtn = findViewById<View>(R.id.deleteFoodBtn)
+        val deleteBtn = findViewById<View>(R.id.deleteFoodBtn)
 
-        logoutBtn.setOnClickListener{
+        deleteBtn.setOnClickListener{
             val alertDialog: AlertDialog = AlertDialog.Builder(this@FoodItemActivity).create()
             alertDialog.setTitle("Delete Food?")
             alertDialog.setMessage("Are you sure you want to delete this food?")

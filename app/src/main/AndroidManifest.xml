@@ -11,7 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.etrite">
-        <activity android:name=".AddNewMealActivity"></activity>
+        <activity android:name=".RecipeActivity"></activity>
+        <activity android:name=".RoutineActivity" />
+        <activity android:name=".ChatroomActivity" />
+        <activity
+            android:name=".AddFoodItemActivity"
+            android:label="@string/title_activity_add_food_item"
+            android:theme="@style/Theme.etrite.NoActionBar" />
+        <activity android:name=".AddNewMealActivity" />
         <activity android:name=".FoodItemActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".UserProfileActivity" />
